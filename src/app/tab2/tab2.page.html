@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Feedback
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,62 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Feedback</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <div class="container">
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>1. Difficulty of exam?</ion-card-title>
+      </ion-card-header>
+      
+      <ion-card-content>
+        <label for="">Rate from 1 (lowest) to 5 (highest)</label>
+        <ion-input placeholder="Enter here"></ion-input>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>2. Was the time sufficient?</ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <label for="">Rate from 1 (lowest) to 5 (highest)</label>
+      <ion-input placeholder="Enter here"></ion-input>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>3. Was the Supervisor supportive?</ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <label for="">Rate from 1 (lowest) to 5 (highest)</label>
+      <ion-input placeholder="Enter here"></ion-input>
+    </ion-card-content>
+  </ion-card>
+  
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>4. Was class neat and tidy?</ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <label for="">Rate from 1 (lowest) to 5 (highest)</label>
+      <ion-input placeholder="Enter text"></ion-input>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-button>
+    Submit
+    <ion-icon slot="end" name="cloud-upload-outline"></ion-icon>
+  </ion-button>
+  
+</div>
+    
 </ion-content>
