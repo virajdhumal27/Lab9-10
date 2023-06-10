@@ -20,13 +20,13 @@
       </ion-card-header>
     
       <ion-card-content>
-        <ion-input label="UCID" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+        <ion-input label="UCID" label-placement="floating" fill="outline" placeholder="Enter text" [(ngModel)]="ucid"></ion-input>
         <ion-input label="Branch" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
         <ion-input label="Course" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
         <ion-input label="SGPA" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
       </ion-card-content>
 
-      <ion-button fill="clear">Save</ion-button>
+      <ion-button fill="clear" (click)="login()">Save</ion-button>
   <ion-button fill="clear" color="danger">Cancel</ion-button>
     </ion-card>
   </div>
