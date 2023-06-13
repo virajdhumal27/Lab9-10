@@ -22,7 +22,7 @@
       
       <ion-card-content>
         <label for="">Rate from 1 (lowest) to 5 (highest)</label>
-        <ion-input placeholder="Enter here"></ion-input>
+        <ion-input placeholder="Enter here" [(ngModel)]="difficulty"></ion-input>
       </ion-card-content>
     </ion-card>
     
@@ -33,7 +33,7 @@
     
     <ion-card-content>
       <label for="">Rate from 1 (lowest) to 5 (highest)</label>
-      <ion-input placeholder="Enter here"></ion-input>
+      <ion-input placeholder="Enter here" [(ngModel)]="time"></ion-input>
     </ion-card-content>
   </ion-card>
   
@@ -44,7 +44,7 @@
     
     <ion-card-content>
       <label for="">Rate from 1 (lowest) to 5 (highest)</label>
-      <ion-input placeholder="Enter here"></ion-input>
+      <ion-input placeholder="Enter here" [(ngModel)]="support"></ion-input>
     </ion-card-content>
   </ion-card>
   
@@ -56,11 +56,11 @@
     
     <ion-card-content>
       <label for="">Rate from 1 (lowest) to 5 (highest)</label>
-      <ion-input placeholder="Enter text"></ion-input>
+      <ion-input placeholder="Enter text" [(ngModel)]="classroom"></ion-input>
     </ion-card-content>
   </ion-card>
   
-  <ion-button>
+  <ion-button (click)="submit()">
     Submit
     <ion-icon slot="end" name="cloud-upload-outline"></ion-icon>
   </ion-button>

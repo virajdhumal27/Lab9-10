@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, collectionData, doc, docData } from '@angular/fire/firestore'
-import { updateDoc } from 'firebase/firestore';
+import { Firestore, collection, collectionData, doc, docData, addDoc, updateDoc } from '@angular/fire/firestore'
 import { Observable } from 'rxjs';
 
 export interface User {
@@ -11,6 +10,13 @@ export interface User {
   course?: string;
   sgpa?: string;
   ucid?: string;
+}
+
+export interface Feedback {
+  difficulty?: string;
+  time?: string;
+  support?: string;
+  classroom?: string;
 }
 
 @Injectable({
@@ -39,5 +45,10 @@ export class DataServiceService {
       course: user.course,
       sgpa: user.sgpa
     })
+  }
+
+  saveFeedback(feedback: Feedback) {
+    const feedbackRef = collection(this.firestore, 'feedback');
+    addDoc(feedbackRef, feedback);
   }
 }
